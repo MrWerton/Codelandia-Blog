@@ -178,17 +178,37 @@ body::-webkit-scrollbar-thumb {
   color: #717171;
 }
 
-.card .topCard .icon-heart:before {
-  content: "\e900";
+.card .topCard .like {
+  cursor: pointer;
+}
+
+.card .topCard .like .icon-heart:before {
+  font-size: 16px;
+  content: "\e901";
   color: #3EA1DB;
   -webkit-transition: .4s;
   transition: .4s;
+  display: block;
 }
 
-.card .topCard .icon-heart:before.active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: #ff5252;
+.card .topCard .like .icon-heart_like_love_twitter_icon_127132:before {
+  content: "\e900";
+  color: #ff7979;
+  display: none;
+}
+
+.card .topCard .like.active .icon-heart:before {
+  display: none;
+}
+
+.card .topCard .like.active .icon-heart_like_love_twitter_icon_127132:before {
+  content: "\e900";
+  color: #ff7979;
+  display: block;
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .card .content h2 {

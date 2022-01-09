@@ -15,15 +15,38 @@
             font-size: 16px;
             color: $gray;
         } 
+       .like{
+           cursor: pointer;
         .icon-heart:before {
-            content: "\e900";
+            font-size: 16px;
+            content: "\e901";
             color: $light;
             transition: .4s;
-            &.active{
-                transform: scale(1.2);
-                color: $red;
-            }
+            display: block;
+              
         }
+        .icon-heart_like_love_twitter_icon_127132:before {
+            content: "\e900";
+            color: #ff7979;
+            display: none;
+          }
+
+        &.active{
+            .icon-heart:before {
+                display: none;
+                
+            }
+            .icon-heart_like_love_twitter_icon_127132:before {
+                content: "\e900";
+                color: #ff7979;
+                display: block;
+                transition: .8s;
+
+                transform: scale(1.5);
+              }
+
+        }
+       }
     }
     .content{
         h2{
