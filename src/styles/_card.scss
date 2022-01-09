@@ -1,0 +1,35 @@
+.card{
+    width: 90%;
+    min-height: 80px;
+    height: auto;
+    background-color: $white;
+    padding: 20px;
+    .topCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .data{
+            font-size: 16px;
+            color: $gray;
+        } 
+        .icon-heart:before {
+            content: "\e900";
+            color: $light;
+            transition: .4s;
+            &.active{
+                transform: scale(1.2);
+                color: $red;
+            }
+        }
+    }
+    .content{
+        h2{
+            font-size: 26px;
+            color: $gray;
+        }
+        p{
+            color: $gray;
+            font-size: 18px;
+        }
+    }
+}

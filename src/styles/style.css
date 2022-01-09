@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+#Header {
+  padding: 41px;
+  background: -webkit-gradient(linear, left top, right top, from(#574AE8), to(#3EA1DB));
+  background: linear-gradient(to right, #574AE8, #3EA1DB);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 270px;
+}
+
+#Header .title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#Header .search {
+  width: 100%;
+  height: 60px;
+  color: #717171;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Header .search span {
+  opacity: .9;
+}
+
+#Header .search label {
+  position: relative;
+  width: 100%;
+}
+
+#Header .search label input {
+  background-color: #3EA1DB;
+  width: 100%;
+  background-color: none;
+  border: none;
+  padding: 10px 15px 10px 34px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+#Header .search label input::-webkit-input-placeholder {
+  color: #fff;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+#Header .search label input:-ms-input-placeholder {
+  color: #fff;
+  filter: opacity(0.7);
+}
+
+#Header .search label input::-ms-input-placeholder {
+  color: #fff;
+  filter: opacity(0.7);
+}
+
+#Header .search label input::placeholder {
+  color: #fff;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+#Header .search label input:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 2px 1px 1px rgba(255, 255, 255, 0.5);
+          box-shadow: 2px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+#Header .search label .icon-search:before {
+  content: "\e986";
+  z-index: 1;
+  position: absolute;
+  color: #fff;
+  left: 8px;
+  top: 9px;
+}
+
+@media (max-width: 780px) {
+  #Header {
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
