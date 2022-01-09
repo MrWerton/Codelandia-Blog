@@ -10,10 +10,24 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100%;
+  background-color: #F3F5F7;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #F3F5F7;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3EA1DB;
+  border-radius: 20px;
 }
 
 #Header {
-  padding: 41px;
   background: -webkit-gradient(linear, left top, right top, from(#574AE8), to(#3EA1DB));
   background: linear-gradient(to right, #574AE8, #3EA1DB);
   display: -webkit-box;
@@ -29,7 +43,13 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 270px;
+  padding: 20px 270px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  height: 20vh;
 }
 
 #Header .title {
@@ -117,8 +137,107 @@ body {
   top: 9px;
 }
 
+@media (max-width: 1024px) {
+  #Header {
+    padding: 20px 100px;
+  }
+}
+
 @media (max-width: 780px) {
   #Header {
+    padding: 10px 20px;
+  }
+}
+
+.card {
+  width: 90%;
+  min-height: 80px;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 1px rgba(128, 128, 128, 0.336);
+          box-shadow: 1px 2px 1px rgba(128, 128, 128, 0.336);
+}
+
+.card .topCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
+}
+
+.card .topCard .data {
+  font-size: 16px;
+  color: #717171;
+}
+
+.card .topCard .icon-heart:before {
+  content: "\e900";
+  color: #3EA1DB;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.card .topCard .icon-heart:before.active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #ff5252;
+}
+
+.card .content h2 {
+  font-size: 26px;
+  padding: 10px 0;
+  color: #717171;
+}
+
+.card .content p {
+  color: #717171;
+  font-size: 18px;
+}
+
+@media (max-width: 780px) {
+  .card h2 {
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+}
+
+#Main {
+  padding: 20px 240px;
+  width: 100%;
+}
+
+#Main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  #Main {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 780px) {
+  #Main {
     padding: 10px;
   }
 }
